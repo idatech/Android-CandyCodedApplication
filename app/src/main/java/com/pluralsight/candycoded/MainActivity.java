@@ -4,11 +4,13 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -27,6 +29,7 @@ import cz.msebera.android.httpclient.Header;
 public class MainActivity extends AppCompatActivity {
     private Candy[] candies;
     private CandyDbHelper candyDbHelper = new CandyDbHelper(this);
+    private String InfoActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,7 +84,21 @@ public class MainActivity extends AppCompatActivity {
     }
     // ***
     // TODO - Task 1 - Show Store Information Activity
-    // ***
+@Override
+public boolean onOptionsItemSelected(MenuItem item) {
+        Intent infoIntent = new Intent(this.InfoActivity);
+        startActivity(infoIntent);
+
+
+    Intent view = new Intent();
+    view.setAction(Intent.ACTION_VIEW);
+    Intent intent = view.setData(Uri.parse());
+    startActivity(view);
+    return super.onOptionsItemSelected(item);
+}
+
+
+// ***
 
     private void addCandiesToDatabase(Candy[] candies) {
         SQLiteDatabase db = candyDbHelper.getWritableDatabase();

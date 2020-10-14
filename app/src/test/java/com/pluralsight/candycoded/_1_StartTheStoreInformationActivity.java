@@ -22,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @PrepareForTest({AppCompatActivity.class, MainActivity.class, Intent.class, InfoActivity.class})
 @RunWith(PowerMockRunner.class)
-public class _1_StartTheStoreInformationActivity {
+public class   _1_StartTheStoreInformationActivity {
     private static MainActivity activity;
 
     private static boolean onOptionsItemSelected_result = true;

@@ -1,5 +1,7 @@
 package com.pluralsight.candycoded;
 
+import android.app.IntentService;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +9,7 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
-public class InfoActivity extends AppCompatActivity {
+public class   InfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,28 @@ public class InfoActivity extends AppCompatActivity {
     // TODO - Task 2 - Launch the Google Maps Activity
     // ***
 
+    @Override
+   void onOptionsItemSelected(InfoActivity) {
+        Intent infoIntent = new Intent();
+        infoIntent.getIntExtra();
+        InfoActivity.this.startActivity(infoIntent);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
